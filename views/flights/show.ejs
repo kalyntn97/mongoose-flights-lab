@@ -5,14 +5,15 @@
 <main>
   <h1><%= title %></h1>
   <section>
+    <div>Departure: </div>
+    <div><%= flight.departs %></div>
     <div>Airline: </div>
     <div><%= flight.airline %></div>
     <div>Airport: </div>
     <div><%= flight.airport %></div>
     <div>Flight Number: </div>
     <div><%= flight.flightNo %></div>
-    <div>Departure: </div>
-    <div><%= flight.departs %></div>
+
     <a href="/flights/<%= flight._id %>/edit">
       <button type="submit">Edit</button>
     </a>

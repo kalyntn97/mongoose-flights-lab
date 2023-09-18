@@ -1,8 +1,12 @@
 import { Flight } from '../models/flight.js'
 
 function newFlight(req, res) {
+  const newFlight = new Flight()
+  const dt = newFlight.departs
+  const departsDate = dt.toISOString().slice(0,16)
   res.render('flights/new', {
-    title: 'Add Flight'
+    title: 'Add Flight',
+    departsDate: departsDate
   })
 }
 
@@ -21,7 +25,7 @@ function create(req, res) {
 }
 
 function index(req, res) {
-  Flight.find({})
+  Flight.find({}).sort({departs:1})
   .then(flights => {
     res.render('flights/index', {
       title: 'All Flights',
@@ -62,9 +66,12 @@ function deleteFlight(req, res) {
 function edit(req, res) {
   Flight.findById(req.params.flightId)
   .then(flight => {
+    const dt = flight.departs
+    const departsDate = dt.toISOString().slice(0,16)
     res.render('flights/edit', {
       title: 'Edit Flight',
-      flight: flight
+      flight: flight,
+      departsDate: departsDate
     })
   })
   .catch(err => {
