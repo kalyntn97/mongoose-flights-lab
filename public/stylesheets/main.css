@@ -81,3 +81,30 @@ nav > a.active {
 .fas::before {
   font-family: "Font Awesome 5 Free";
 }
+
+button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(121, 121, 174);
+  color: #14005c;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  box-shadow: 0 5px rgb(115, 115, 115);
+}
+
+button:hover {
+  background-color: rgb(32, 32, 69);
+  color: whitesmoke;
+}
+
+button:active {
+
+  box-shadow: 0 3px rgb(61, 61, 61);
+  transform: translateY(2px);
+}
+
+img {
+  size: contain;
+  width: 30px;
+}
