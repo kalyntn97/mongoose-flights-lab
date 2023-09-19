@@ -2,6 +2,7 @@ table {
   font-size: 20px;
   border: 4px solid #1c0051;
   border-radius: 10px;
+  background-color: rgb(217, 225, 233);
 }
 
 table thead th {
@@ -21,6 +22,16 @@ table tbody tr:hover {
   color: whitesmoke;
 }
 
-table a:hover {
-  color: rgb(243, 176, 255);
+table td > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #14005c;
+  font-weight: bold;
 }
+
+table td>a:hover {
+  color: whitesmoke;
+}
+
