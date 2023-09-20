@@ -11,6 +11,7 @@ import methodOverride from 'method-override'
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as flightsRouter } from './routes/flights.js'
+import { router as mealsRouter } from './routes/meals.js'
 import { config } from 'process'
 
 // create the express app
@@ -33,6 +34,7 @@ app.use(methodOverride('_method'))
 // mount imported routes
 app.use('/', indexRouter)
 app.use('/flights', flightsRouter)
+app.use('/meals', mealsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
